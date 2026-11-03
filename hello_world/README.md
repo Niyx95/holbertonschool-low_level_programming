@@ -17,4 +17,7 @@ Welcome to my hello world directory, In this directory you can find various scri
 - C code that prints a string to stdout
 
 ### 5-print.c
-- C code that prints a string with a newline, runs correctly on 32 or 64 bit machines 
+- C code that prints a string with a newline
+
+### 6-size.c
+- C program that print the size of types, works on 32 and 64 it systems 
