@@ -13,5 +13,5 @@ int main(void)
 	{
 		printf("%c\n", chr);
 	}
-
+	return (0);
 }
