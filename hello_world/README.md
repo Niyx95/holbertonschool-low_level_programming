@@ -11,7 +11,7 @@ Welcome to my hello world directory, In this directory you can find various scri
 - script that takes a C file as input and assembles only
 
 ### 3-name
--script that outputs a C file with a different name
+- script that outputs a C file with a different name
 
 ### 4-puts.c
 - C code that prints a string to stdout
