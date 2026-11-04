@@ -1,17 +1,10 @@
-#include <main.h>
+#include "main.h"
 /**
- * function - prints _putchar to display
+ * main - print _putchar to display
  *
  *
  *
- * Return: always 0 (Success)
- */
-int _putchar(char c);
-/**
- * main - Entry point
- *
- * 
- * Return: always 0 (Success)
+ * Return: 0 always (Success)
  */
 int main(void)
 {
