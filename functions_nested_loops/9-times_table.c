@@ -12,12 +12,16 @@ void printint(int num)
 	_putchar((num / 10) + '0');
 	}
 	_putchar((num % 10) + '0');
+	if (num < 10)
+	{
+	_putchar(' ');		
+	}
 }
 /**
  * times_table - print table 1 to 9 * 2
  *
  *
- * Rerutn: always 0 (Success)
+ * Return: always 0 (Success)
  */
 void times_table(void)
 {
