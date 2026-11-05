@@ -16,8 +16,6 @@ void printint(int num)
 		_putchar(' ');
 	}
 	_putchar((num % 10) + '0');
-	_putchar(',');
-	_putchar(' ');
 }
 /**
  * times_table - print table 1 to 9 * 2
@@ -38,6 +36,11 @@ void times_table(void)
 		while (column <= 9)
 		{
 			printint(row * column);
+			if (column < 9)
+			{
+				_putchar(',');
+				_putchar(' ');
+			}
 			column++;
 		}
 		row++;
