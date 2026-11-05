@@ -13,7 +13,7 @@ void printint(int num)
 	}
 	else
 	{ 
-		_putchar(' ');
+			_putchar(' ');
 	}
 	_putchar((num % 10) + '0');
 }
@@ -35,15 +35,19 @@ void times_table(void)
 		column = 0;
 		while (column <= 9)
 		{
-			printint(row * column);
-			if (column < 9)
+			if (column == 0)
+			{
+				_putchar('0');
+			}
+			else
 			{
 				_putchar(',');
 				_putchar(' ');
+				printint(row * column);
 			}
 			column++;
 		}
-		row++;
 		_putchar('\n');
+		row++;
 	}
 }
