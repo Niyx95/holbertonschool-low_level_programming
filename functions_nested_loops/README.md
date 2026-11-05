@@ -1,6 +1,14 @@
 ## Overview
 this directory contains exercies for nested loops made for Holberon Australia School
 
+## _putchar
+Function provided by Holberton to get module functions and nested loops done
+
+## main.c
+Main function provided by Holberton to get the module functions and nested loops done
+main.c changes for every task. 
+main.c is just the main function for task 11, other tasks not tracked.
+
 ### 0-putchar.c
 - function tha print "putchar" with only function call
 
