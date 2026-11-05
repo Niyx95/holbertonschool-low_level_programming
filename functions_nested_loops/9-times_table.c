@@ -12,8 +12,8 @@ void printint(int num)
 		_putchar((num / 10) + '0');
 	}
 	else
-	{ 
-			_putchar(' ');
+	{
+		_putchar(' ');
 	}
 	_putchar((num % 10) + '0');
 }
