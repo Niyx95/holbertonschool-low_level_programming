@@ -19,15 +19,12 @@ void more_numbers(void)
 		n = 0;
 		while (column <= 14)
 		{
-			if (n <= 9)
-			{
-				_putchar(n + '0');
-			}
-			else
+			if (n > 9)
 			{
 				_putchar((n / 10) + '0');
-				_putchar((n % 10) + '0');
-			}
+			}	
+			_putchar((n % 10) + '0');
+			
 			column++;
 			n++;
 		}
