@@ -11,9 +11,12 @@ void print_diagonal(int n)
 	int space;
 
 	c = 0;
-
-	while (c < n)
+	if (n <= 0)
 	{
+		_putchar('\n');
+	}
+	while (c < n)
+	{	
 		space = 0;
 		while (space < c)
 		{
