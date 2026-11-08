@@ -9,7 +9,7 @@ void print_square(int size)
 {
 
 	int c;
-	int row;
+	int column;
 
 	c = 0;
 
@@ -19,11 +19,11 @@ void print_square(int size)
 	}
 	while (c < size)
 	{
-		row = 0;
-		while (size > row)
+		column = 0;
+		while (size > column)
 		{
 			_putchar('#');
-			row++;
+			column++;
 		}
 		_putchar('\n');
 		c++;
