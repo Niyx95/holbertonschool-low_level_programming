@@ -24,3 +24,12 @@ In this directory you will find more exercises about functions and nested loops,
 
 ### 7-print_diagonal.c
 - function that print a forwardslash and a space passed as an argument.
+
+### 8-print_square.c
+- function that prints a square of '#' passed as an argument.
+
+### 9-dizz_buzz.c
+- C program that prints soles the Fizz Buzz problem, int from 1 to 100.
+
+### 10-print_triangle.c
+- function that prints a triangle.
