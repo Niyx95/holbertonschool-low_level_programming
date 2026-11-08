@@ -14,7 +14,8 @@ int main(void)
 	max = 100;
 
 	while (n <= max)
-	{	if (n != 1)
+	{
+		if (n != 1)
 		{
 			printf(" ");
 		}
@@ -36,5 +37,6 @@ int main(void)
 		}
 		n++;
 	}
+	printf(" ");
 	return (0);
 }
