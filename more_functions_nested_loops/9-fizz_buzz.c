@@ -38,6 +38,6 @@ int main(void)
 		n++;
 	}
 	printf(" ");
-	prinft('\n');
+	printf('\n');
 	return (0);
 }
