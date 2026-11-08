@@ -12,7 +12,11 @@ void print_square(int size)
 	int row;
 
 	c = 0;
-
+	
+	if (size == 0)
+	{
+		_putchar('\n');
+	}
 	while (c < size)
 	{
 		row = 0;
