@@ -38,6 +38,5 @@ int main(void)
 		n++;
 	}
 	printf(" ");
-	printf("\n");
 	return (0);
 }
