@@ -96,7 +96,7 @@ int main(void)
 	printf("TOTAL seconds: %f\n", total);
 	printf("BUILD_DATA seconds: %f\n", build_data);
 	printf("PROCESS seconds: %f\n", process);
-	printf("REDUCE seconds %f\n", reduce);
+	printf("REDUCE seconds: %f\n", reduce);
 
     return 0;
 }
