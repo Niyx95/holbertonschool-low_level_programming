@@ -1,13 +1,13 @@
 #include <stdio.h>
 #include <string.h>
-/**
- * prototypes
- */
+
+/** prototypes */
 int add(int a, int b);
 int subtract(int a, int b);
 int multiply(int a, int b);
 int divide(int a, int b);
 
+/* main - Emtry point */
 int main(void)
 {
 	char user_input[15];
@@ -16,89 +16,89 @@ int main(void)
 	int b;
 	int sum;
 
+	printf("hello, this a terminal based calculator!\n");
+	
 	calc_is_on = 1;
-
 	while (calc_is_on)
 	{
-		printf("welcome to terminal based calclator..\noptions: add, subtract, multiply and divide");
-		printf("type your option:(type 'exit' to abort)\n>>");
+		printf("options: add, subtract, multiply and divide\n");
+		printf("type your option:(type 'exit' to abort)\n>> ");
 		scanf("%14s", user_input);
 
 		if (strcmp(user_input, "exit") == 0)
 		{
 			printf("aborting\n");
-			break;
+			calc_is_on = 0;
+		} else if
+			(strcmp(user_input, "add") != 0 &&
+			strcmp(user_input, "subtract") != 0 &&
+   			strcmp(user_input, "multiply") != 0 &&
+			strcmp(user_input, "divide") != 0)
+		{
+			printf("error: invalid input");
 		}
-		printf("type number 1:\n>>");
-		scanf("%d\n", &a);
-		printf("type number 2:\n>>");
-		scanf("%d\n", &b);
+		else
+		{
+			printf("type number 1:\n>> ");
+			scanf("%d", &a);
+			printf("type number 2:\n>> ");
+			scanf("%d", &b);
+		
 
-		if (strcmp(user_input, "add") == 0)
-		{
-			sum = add(a, b);
-			printf("the total is: %d\n", sum);
-		}
-		else if (strcmp(user_input, "subtarct") == 0)
-		{
-			sum = subtract(a, b);
-			printf("the total is: %d\n", sum);
+			if (strcmp(user_input, "add") == 0)
+			{
+				sum = add(a, b);
+				printf("the total is: %d\n", sum);
+			}
+			else if (strcmp(user_input, "subtract") == 0)
+			{
+				sum = subtract(a, b);
+				printf("the total is: %d\n", sum);
 
-		}
-		else if (strcmp(user_input, "multiply") == 0)
-		{
-			sum = multiply(a, b);
-			printf("the total is: %d\n", sum);
+			}
+			else if (strcmp(user_input, "multiply") == 0)
+			{
+				sum = multiply(a, b);
+				printf("the total is: %d\n", sum);
 
-		}
-		else if (strcmp(user_input, "divide") == 0)
-		{
-			sum = divide(a, b);
-			printf("the total is: %d\n", sum);
+			}
+			else if (strcmp(user_input, "divide") == 0)
+			{
+				sum = divide(a, b);
+				printf("the total is: %d\n", sum);
+			}
+			/* ask user if he wants to do another operation */
+				printf("do you want to do another operation?(y or n)\n");
+				scanf("%14s", user_input);
+			if (strcmp(user_input, "n") == 0)
+			{
+				calc_is_on = 0;
+			}
 		}
 	}
+	printf("byebye\n");
 	return (0);
 }
-/**
- * add - function that return an addition.
- *@a: - int to add
- *@b: - int to add
- *
- * Return: int (integer)
- */
+
+/** add function - returns an addition */
 int add(int a, int b)
 {
 	return (a + b);
 }
-/**
- * subtract - function that return a subtraction.
- *@a: - int to subtract
- *@b: - int to subtract
- *
- * Return: int (integer)
- */
+
+/** subtract function - returns a subtraction */
 int subtract(int a, int b)
 {
 	return (a - b);
 }
-/**
- * multiply - function that return a multiplication.
- *@a: - int to multiply
- *@b: - int to multiply
- *
- *
- */
+
+/** muliply function - returns a multiplication */
 int multiply(int a, int b)
 {
 	return (a * b);
 }
-/**
- * divide - function that return a division.
- *@a: - int to divide
- *@b: - int to divide
- *
- * Return: int (integer)
- */
+
+/** divide function - return a dividion */
 int divide(int a, int b)
 {
 	return (a / b);
