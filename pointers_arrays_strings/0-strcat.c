@@ -2,7 +2,7 @@
 /**
  * *_strcat - append two strings togheder
  *@dest: - destination variable
- *@src - string to append
+ *@src: - string to append
  *
  * Return: char (characher)
  */
