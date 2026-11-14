@@ -33,3 +33,32 @@ This directory contains all exercies done about C memory, pointers and arrays. e
 
 ### 10-100_atoi.c
 - function that converts a string into integers.
+
+# MODULE 2
+
+### 0-strcat.c
+- function that appends two string together.
+
+### 1-strncat.c
+- function that concatenates two string together, only n times.
+
+### 2-strncpy.c
+- function that copies a string.
+
+### 3-strcmp.c
+- function that compares two strings.
+
+### 4-rev_array.c
+- function that reverst an array.
+
+### 5-string_toupper.c
+- function that converts a string to uppercase.
+
+### 6-cap_string.c
+- function that converts every first char to uppercase.
+
+### 7-leet.c
+- function that encodes astring into 1337.
+
+
+
