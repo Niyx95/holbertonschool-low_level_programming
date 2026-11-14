@@ -7,7 +7,7 @@ int subtract(int a, int b);
 int multiply(int a, int b);
 int divide(int a, int b);
 
-/* main - Emtry point */
+/* main - Entry point */
 int main(void)
 {
 	char user_input[15];
@@ -21,7 +21,7 @@ int main(void)
 	calc_is_on = 1;
 	while (calc_is_on)
 	{
-		printf("options: add, subtract, multiply and divide\n");
+		printf("Select:\n1: add\n2: subtract\n3: multiply\n4: divide\n");
 		printf("type your option:(type 'exit' to abort)\n>> ");
 		scanf("%14s", user_input);
 
@@ -30,12 +30,12 @@ int main(void)
 			printf("aborting\n");
 			calc_is_on = 0;
 		} else if
-			(strcmp(user_input, "add") != 0 &&
-			strcmp(user_input, "subtract") != 0 &&
-   			strcmp(user_input, "multiply") != 0 &&
-			strcmp(user_input, "divide") != 0)
+			(strcmp(user_input, "1") != 0 &&
+			strcmp(user_input, "2") != 0 &&
+   			strcmp(user_input, "3") != 0 &&
+			strcmp(user_input, "4") != 0)
 		{
-			printf("error: invalid input");
+			printf("error: invalid input\n");
 		}
 		else
 		{
@@ -43,29 +43,35 @@ int main(void)
 			scanf("%d", &a);
 			printf("type number 2:\n>> ");
 			scanf("%d", &b);
-		
 
-			if (strcmp(user_input, "add") == 0)
+			if (strcmp(user_input, "1") == 0)
 			{
 				sum = add(a, b);
 				printf("the total is: %d\n", sum);
 			}
-			else if (strcmp(user_input, "subtract") == 0)
+			else if (strcmp(user_input, "2") == 0)
 			{
 				sum = subtract(a, b);
 				printf("the total is: %d\n", sum);
 
 			}
-			else if (strcmp(user_input, "multiply") == 0)
+			else if (strcmp(user_input, "3") == 0)
 			{
 				sum = multiply(a, b);
 				printf("the total is: %d\n", sum);
 
 			}
-			else if (strcmp(user_input, "divide") == 0)
+			else if (strcmp(user_input, "4") == 0)
 			{
-				sum = divide(a, b);
-				printf("the total is: %d\n", sum);
+				if (b == 0)
+				{
+					printf("operation not permitted\n");
+				}
+				else
+				{
+					sum = divide(a, b);
+					printf("the total is: %d\n", sum);
+				}
 			}
 			/* ask user if he wants to do another operation */
 				printf("do you want to do another operation?(y or n)\n");
@@ -76,7 +82,7 @@ int main(void)
 			}
 		}
 	}
-	printf("byebye\n");
+	printf("bye-bye\n");
 	return (0);
 }
 
