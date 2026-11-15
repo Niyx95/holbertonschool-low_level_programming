@@ -60,5 +60,28 @@ This directory contains all exercies done about C memory, pointers and arrays. e
 ### 7-leet.c
 - function that encodes astring into 1337.
 
+# Module 3
 
+### 0-memset.c
+- function that fills memory with a constant byte.
 
+### 1-memcpy.c
+- function that copies bytes from a buffer to another one.
+
+### 2-strchr.c
+- function that return the address from a given char ad argument.
+
+### 3-strspn.c
+- function that return the length in bytes.
+
+### 4-strpbrk.c
+- function that returns the first occurance in bytes.
+
+### 5-strstr.c
+- function that returns the first occurance of the substring.
+
+### 6-print_chessboard.c
+- function that print a chessboard.
+
+### 7-print_diagsums.c
+- function that prints the sum of diagonals in a square of integers.
