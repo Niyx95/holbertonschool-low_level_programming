@@ -1,7 +1,7 @@
 #include "main.h"
 #include <stddef.h>
 /**
- * *_strstr - 
+ * *_strstr - return first substring match
  *@haystack: - string to check
  *@needle: - substring to find first occurance
  *
@@ -14,7 +14,10 @@ char *_strstr(char *haystack, char *needle)
 
 	i = 0;
 	j = 0;
-
+	if (needle[0] == '\0')
+	{
+		return (haystack);
+	}
 	while (haystack[i] != '\0')
 	{
 		j = 0;
@@ -25,6 +28,10 @@ char *_strstr(char *haystack, char *needle)
 		if (haystack[i + j] == needle[j])
 		{
 			return (haystack + i);
+		}
+		if (needle[j] == '\0')
+		{
+			return (&haystack[i]);
 		}
 		i++;
 	}
