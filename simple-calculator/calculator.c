@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include <string.h>
+#include <unistd.h>
 
 /** prototypes */
 int add(int a, int b);
@@ -28,6 +29,7 @@ int main(void)
 		if (strcmp(user_input, "exit") == 0)
 		{
 			printf("aborting\n");
+			sleep(1);
 			calc_is_on = 0;
 		} else if
 			(strcmp(user_input, "1") != 0 &&
@@ -74,11 +76,19 @@ int main(void)
 				}
 			}
 			/* ask user if he wants to do another operation */
-				printf("do you want to do another operation?(y or n)\n");
-				scanf("%14s", user_input);
+			printf("do you want to do another operation?(y or n)\n");
+			scanf("%14s", user_input);
+
 			if (strcmp(user_input, "n") == 0)
 			{
 				calc_is_on = 0;
+			}
+			else if	(strcmp(user_input, "n") != 0 &&
+			  		(strcmp(user_input, "y") != 0))
+			{
+				printf("not a valid option\nrestarting...\n");
+				sleep(1);
+				continue;
 			}
 		}
 	}
