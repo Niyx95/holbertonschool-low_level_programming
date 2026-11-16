@@ -3,24 +3,21 @@
 #include <stdlib.h>
 
 /**
- * initialize_strings -
- * @s1: - str to init
- * @s2: - str to int
+ * _strlen - count number of characters in a string
+ * @str: - the string
  *
- * Return: void
+ * Return: int - the length
  */
-void initialize_strings(char *s1, char *s2)
+int _strlen(char *str)
 {
-	if (s1 == NULL)
-	{
-		s1 = "";
-	}
-	if (s2 == NULL)
-	{
-		s2 = "";
-	}
-}
+	int i = 0;
 
+	while (str[i] != '\0')
+	{
+		i++;
+	}
+	return (i);
+}
 /**
  * *str_concat - concatenates two strings togheder
  *@s1: - string to concatenate
@@ -33,18 +30,16 @@ char *str_concat(char *s1, char *s2)
 	int i, j, y, x;
 	char *ptr;
 
-	initialize_strings(s1, s2);
-
-	i = 0;
-	while (s1[i] != '\0')
+	if (s1 == NULL)
 	{
-		i++;
+		s1 = "";
 	}
-	j = 0;
-	while (s2[j] != '\0')
+	if (s2 == NULL)
 	{
-		j++;
+		s2 = "";
 	}
+	i = _strlen(s1);
+	j = _strlen(s2);
 	ptr = malloc((i + j + 1) * sizeof(char));
 	if (ptr == NULL)
 	{
