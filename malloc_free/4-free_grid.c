@@ -6,17 +6,17 @@
  * @grid: - grid to free
  * @height: - height of the grid
  *
- * Return: void 
+ * Return: void
  */
 void free_grid(int **grid, int height)
 {
 	int i;
-	
+
 	i = 0;
 	while (i < height)
 	{
 		free(grid[i]);
-		i++;	
+		i++;
 	}
 	free(grid);
 }
