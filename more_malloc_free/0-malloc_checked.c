@@ -1,7 +1,7 @@
 #include <stddef.h>
 #include <stdlib.h>
 /**
- * *malloc_checked - check memory allocated 
+ * *malloc_checked - check memory allocated
  * @b: - usigned int to check
  *
  * Return: nothing (void)
