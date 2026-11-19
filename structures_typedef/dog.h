@@ -1,3 +1,5 @@
+#ifndef DOG_H
+#define DOG_H
 /**
  * struct dog - container for dog attributes
  * @name: - name of dog
@@ -12,3 +14,5 @@ typedef struct dog
 	float age;
 	char *owner;
 }	dog;
+
+#endif
