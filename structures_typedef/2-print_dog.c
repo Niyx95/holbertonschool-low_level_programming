@@ -4,7 +4,7 @@
 #include <stdio.h>
 /**
  * print_dog - function that print a struct of a dog
- * @d - pointer to a dog struct
+ * @d: - pointer to a dog struct, pointer to check
  *
  * Return: nothing (void)
  */
@@ -14,12 +14,18 @@ void print_dog(struct dog *d)
 	{
 		return;
 	}
-	if (d -> name == NULL)
+	if (d->name == NULL)
 	{
 		printf("Name: (nil)\n");
 	}
-	else if (d -> owner == NULL)
+	else if (d->owner == NULL)
 	{
 		printf("(Name: nil)\n");
+	}
+	else
+	{
+		printf("%s\n", d->name);
+		printf("%f\n", d->age);
+		printf("%s\n", d->owner);
 	}
 }
