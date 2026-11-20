@@ -1,5 +1,5 @@
 #include "dog.h"
-#include <stdio.h>
+#include <string.h>
 #include <stddef.h>
 #include <stdlib.h>
 /**
@@ -21,5 +21,7 @@ dog_t *new_dog(char *name, float age, char *owner)
 	doggy->name = name;
 	doggy->age = age;
 	doggy->owner = owner;
+	//duplicate strs need to be stored in new allocated memory
+	memcpy(&name, &owner, sizeof(doggy));	
 	return (doggy);
 }
