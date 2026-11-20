@@ -39,12 +39,12 @@ dog_t *new_dog(char *name, float age, char *owner)
 	{
 		return (NULL);
 	}
-	/*get len, alloc len + null, copy*/
 	i = string_len(name);
 	doggy->name = malloc(i + 1);
 	if (doggy->name == NULL)
 	{
-		free(doggy->name);
+		free(doggy);
+		return (NULL);
 	}
 	tmp = 0;
 	while (name[tmp] != '\0')
@@ -54,12 +54,13 @@ dog_t *new_dog(char *name, float age, char *owner)
 	}
 	doggy->name[tmp] = '\0';
 	doggy->age = age;
-	/*get len, alloc len + '\0', copy*/
 	j = string_len(owner);
 	doggy->owner = malloc(j + 1);
 	if (doggy->owner == NULL)
 	{
-		free(doggy->owner);
+		free(doggy->name);
+		free(doggy);
+		return (NULL);
 	}
 	tmp = 0;
 	while (owner[tmp] != '\0')
