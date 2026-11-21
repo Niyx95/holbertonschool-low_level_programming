@@ -21,6 +21,33 @@ int string_len(char *str)
 	return (i);
 }
 /**
+ * make_copy - make a copy of given arg
+ * @arg: - agrument passed in
+ *
+ * Return: - char to a pointer
+ */
+char *make_copy(char *arg)
+{
+	int i, j;
+	char *copy;
+
+	i = 0;
+	j = string_len(arg);
+	copy = malloc(j + 1);
+
+	if (copy == NULL)
+	{
+		return (NULL);
+	}
+	while (arg[i] != '\0')
+	{
+		copy[i] = arg[i];
+		i++;
+	}
+	copy[i] = '\0';
+	return(copy);
+}
+/**
  * new_dog - print a new dog instance
  * @name: - name of new dog
  * @age: - age of new dog
@@ -30,8 +57,6 @@ int string_len(char *str)
  */
 dog_t *new_dog(char *name, float age, char *owner)
 {
-	int i, j;
-	int tmp;
 	dog_t *doggy;
 
 	doggy = malloc(sizeof(dog_t));
@@ -39,35 +64,22 @@ dog_t *new_dog(char *name, float age, char *owner)
 	{
 		return (NULL);
 	}
-	i = string_len(name);
-	doggy->name = malloc(i + 1);
+	doggy->name = make_copy(name);
 	if (doggy->name == NULL)
 	{
 		free(doggy);
 		return (NULL);
 	}
-	tmp = 0;
-	while (name[tmp] != '\0')
-	{
-		doggy->name[tmp] = name[tmp];
-		tmp++;
-	}
-	doggy->name[tmp] = '\0';
+
 	doggy->age = age;
-	j = string_len(owner);
-	doggy->owner = malloc(j + 1);
+
+	doggy->owner = make_copy(owner);
 	if (doggy->owner == NULL)
 	{
 		free(doggy->name);
 		free(doggy);
 		return (NULL);
 	}
-	tmp = 0;
-	while (owner[tmp] != '\0')
-	{
-		doggy->owner[tmp] = owner[tmp];
-		tmp++;
-	}
-	doggy->owner[tmp] = '\0';
+
 	return (doggy);
 }
