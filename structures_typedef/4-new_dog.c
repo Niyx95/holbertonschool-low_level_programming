@@ -45,7 +45,7 @@ char *make_copy(char *arg)
 		i++;
 	}
 	copy[i] = '\0';
-	return(copy);
+	return (copy);
 }
 /**
  * new_dog - print a new dog instance
