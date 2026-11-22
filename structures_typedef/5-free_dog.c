@@ -4,7 +4,7 @@
 /**
  * free_dog - frees a successfull dog istance
  * dog_t - pointer to a struct dog
- * d: - variable to check
+ * @d: - variable to check
  *
  * Return: void (nothing)
  */
