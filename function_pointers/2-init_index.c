@@ -32,7 +32,7 @@ int int_index(int *array, int size, int (*cmp)(int))
 		result = (*cmp)(*array);
 		if (result != 0)
 		{
-			return (i);
+			return (i)
 
 		}
 		array++;
