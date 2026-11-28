@@ -33,8 +33,8 @@ void print_strings(const char *separator, const unsigned int n, ...)
 		else
 		{
 			printf("%s", str);
-			i++;
 		}
+		i++;
 	}
 	va_end(list);
 	printf("\n");
